@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react"
 
-const Card = ({imag}) => {
+const Card = ({imag, className=""}) => {
     const [isVisible, setIsVisible] = useState(false);
     const cardRef = useRef(null);
 
@@ -30,7 +30,7 @@ const Card = ({imag}) => {
     return (
         <div
             ref={cardRef}
-            className={` flex transition cubic-bezier(0.4, 0, 0.6, 1) delay-150 duration-700 will-change-transform
+            className={`${className} flex transition cubic-bezier(0.4, 0, 0.6, 1) delay-150 duration-700 will-change-transform
              ${isVisible ? 'scale-100 cubic-bezier(0.4, 0, 0.6, 1) backdrop-blur ' : ' scale-[.60] backdrop-blur'}`}
                 
         >

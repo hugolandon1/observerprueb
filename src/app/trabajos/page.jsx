@@ -1,7 +1,12 @@
+import Carousel2 from "@/components/carousel2/Carousel2";
+
+
+
+
 const Trabajos = () => {
     return (
       <div>
-          <h2>TRABAJOS</h2>
+          <Carousel2 />
       </div>
     )
   }
