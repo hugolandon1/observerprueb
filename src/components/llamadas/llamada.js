@@ -14,3 +14,17 @@ export async function getCaras() {
         return [];
     }
 }
+
+export async function getStore() {
+    try {
+        const querySnapshot = await getDocs(collection(db, "adultos"));
+        const adultos = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+        }));
+        return adultos
+    }catch (error) {
+        console.log("Esto es un erro:", error);
+        return []
+    }
+}
